@@ -17,9 +17,8 @@ const ProductList = () => {
   const handleAddToBasket = (item) => {
     if (!basket.includes(item)) {
       setBasket([...basket, item]);
-      // console.log(basket);
     } else {
-      alert("something wrong");
+      window.alert("you already have this product in your basket");
     }
   };
 
