@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../../context";
 import "./index.scss";
@@ -24,6 +25,11 @@ const ProductList = () => {
 
   return (
     <div className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Product List</title>
+        <meta description="this is product list page" />
+      </Helmet>
       <table>
         <thead>
           <th> Product ID </th>
