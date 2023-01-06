@@ -38,6 +38,7 @@ const ProductInBasket = () => {
           })}
         </tbody>
       </table>
+      <button className="btn" onClick={() => setBasket([])}> Empty </button>
     </div>
   );
 };
