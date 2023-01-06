@@ -5,6 +5,10 @@ import "./index.scss"
 const ProductInBasket = () => {
   const { basket, setBasket } = useContext(ProductContext);
 
+  const handleRemove = (product) => {
+    setBasket(basket.filter(q => q !== product ))
+  }
+
   return (
     <div className="container">
       <table>
@@ -26,7 +30,7 @@ const ProductInBasket = () => {
                 <td>{basket.unitPrice}</td>
                 <td>{basket.quantityPerUnit}</td>
                 <td>
-                  <button>remove</button>
+                  <button onClick={() => handleRemove(basket)}>remove</button>
                 </td>
               </tr>
             );
