@@ -5,14 +5,15 @@ import "./index.scss"
 const ProductInBasket = () => {
   const { basket, setBasket } = useContext(ProductContext);
 
+
   const handleRemove = (product) => {
-    setBasket(basket.filter(q => q !== product ))
+    setBasket(basket.filter(q => q !== product))
   }
 
   return (
     <div className="container">
       <table>
-        <thead>
+        <thead className="product-basket">
           <tr>
             <th>Id</th>
             <th>Name</th>
